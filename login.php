@@ -36,8 +36,8 @@
                     </div>
                     <button type="submit" name="entrar" class="btn btn-primary btn-block">Entrar</button>
                     <div class="text-center">
-                        <a href="registro.html" class="d-block small mt-3">Registrar-se</a>
-                        <a href="recuperar.html" class="d-block small">Esqueceu Senha?</a>
+                        <a href="registro.php" class="d-block small mt-3">Registrar-se</a>
+                        <a href="recuperar.php" class="d-block small">Esqueceu Senha?</a>
                     </div>
 
 

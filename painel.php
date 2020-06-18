@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <!-- Responsivo -->
@@ -10,7 +11,20 @@
     <link rel="stylesheet" type="text/css" href="bibliotecas/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sb-admin.min.css">
 </head>
+
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
+    <!-- Logando no sistema -->
+
+    <?php
+
+    session_start();
+    if (!isset($_SESSION["usuario"])) {
+        header("Location:login.php");
+    }
+    ?>
+
+    <li><a href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $_SESSION["usuario"]; ?></a></li>
+
     <!-- Navegacao -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <a class="navbar-brand" href="painel.html">Painel</a>
@@ -20,30 +34,30 @@
         <div id="navbarPainel" class="collapse navbar-collapse">
             <ul class="navbar-nav navbar-sidenav">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                    <a class="nav-link" href="#" >
+                    <a class="nav-link" href="#">
                         <i class="fa fa-fw fa-dashboard"></i>
                         <span class="nav-link-text">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                    <a class="nav-link" href="#" >
+                    <a class="nav-link" href="#">
                         <i class="fa fa-fw fa-table"></i>
                         <span class="nav-link-text">Tabelas</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                    <a class="nav-link" href="#" >
+                    <a class="nav-link" href="#">
                         <i class="fa fa-fw fa-wrench"></i>
                         <span class="nav-link-text">Componentes</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                    <a class="nav-link" href="#" >
+                    <a class="nav-link" href="#">
                         <i class="fa fa-fw fa-file"></i>
                         <span class="nav-link-text">Páginas</span>
                     </a>
                 </li>
-            </ul> 
+            </ul>
             <ul class="navbar-nav sidenav-toggler">
                 <li class="nav-item">
                     <a id="sidenavToggler" class="nav-link text-center">
@@ -52,25 +66,25 @@
                 </li>
             </ul>
         </div>
-            <ul class="navbar-nav -ml-auto">
-                <li class="nav-item">
-                    <form class="form-inline my-2 my-lg-0 mr-lg-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Busca">
-                            <span class="input-group-btn">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </form>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">
-                        <i class="fa fa-sign-out">Sair</i>
-                    </a>
-                </li>
-            </ul>
+        <ul class="navbar-nav -ml-auto">
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Busca">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sair.php">
+                    <i class="fa fa-sign-out">Sair</i>
+                </a>
+            </li>
+        </ul>
         </div>
     </nav>
     <div class="content-wrapper">
@@ -104,4 +118,5 @@
     <script src="bibliotecas/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/sb-admin.min.js" text="text/javascript"></script>
 </body>
-</html>   
+
+</html>

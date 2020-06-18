@@ -25,8 +25,8 @@
                     </div>
                     <button class="btn btn-primary btn-block">Recuperar Senha</button>
                     <div class="text-center">
-                        <a href="registro.html" class="d-block small mt-3">Registrar-se</a>
-                        <a href="login.html" class="d-block small">Login</a>
+                        <a href="registro.php" class="d-block small mt-3">Registrar-se</a>
+                        <a href="login.php" class="d-block small">Login</a>
                     </div>
                     
 

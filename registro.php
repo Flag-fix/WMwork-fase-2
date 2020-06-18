@@ -49,8 +49,8 @@
                     </div>                    
                     <button class="btn btn-primary btn-block">Registrar-se</button>
                     <div class="text-center">
-                        <a href="recuperar.html" class="d-block small mt-3">Esqueceu a senha?</a>
-                        <a href="login.html" class="d-block small">Login</a>
+                        <a href="recuperar.php" class="d-block small mt-3">Esqueceu a senha?</a>
+                        <a href="login.php" class="d-block small">Login</a>
                     </div>
                 </form> 
             </div>
