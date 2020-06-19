@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="bibliotecas/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bibliotecas/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sb-admin.min.css">
+    <link rel="stylesheet" href="css/search.css">
+
 </head>
 
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
@@ -23,11 +25,9 @@
     }
     ?>
 
-    <li><a href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $_SESSION["usuario"]; ?></a></li>
-
     <!-- Navegacao -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" href="painel.html">Painel</a>
+        <a class="navbar-brand" href="painel.php">Painel</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarPainel" aria-control="navbarPainel" aria-expanded="false" aria-label="Navegação Toggle">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,6 +58,7 @@
                     </a>
                 </li>
             </ul>
+            <!-- Diminuir menu pra esquerda -->
             <ul class="navbar-nav sidenav-toggler">
                 <li class="nav-item">
                     <a id="sidenavToggler" class="nav-link text-center">
@@ -66,16 +67,21 @@
                 </li>
             </ul>
         </div>
+        <br>
+        <a href="" style="width: 68px; height: 35px; " >
+            <span class="fa fa-user" aria-hidden="true"></span>
+            <?php echo $_SESSION["usuario"]; ?>
+
+        </a>
         <ul class="navbar-nav -ml-auto">
+            <li class="">
+
+            </li>
             <li class="nav-item">
                 <form class="form-inline my-2 my-lg-0 mr-lg-2">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Busca">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span>
+                    <div class="search__wrapper">
+                        <input type="text" name="" placeholder=" Buscar" class="search__field" style="background-color: transparent;">
+                        <button type="submit" class="fa fa-search search__icon"></button>
                     </div>
                 </form>
             </li>
@@ -99,8 +105,8 @@
             </ol>
             <div class="row">
                 <div class="col-12">
-                    <h1>Mochilinha se me dá trabalho pakas</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero numquam temporibus quo suscipit, itaque error blanditiis? Eum harum quas rem ratione fugiat minima nisi facere magnam? Asperiores id nobis vel!</p>
+                    <h1>Eu te amo muito</h1>
+                    <p>E desculpa de novo por hoje ! TE AMO</p>
                 </div>
             </div>
         </div>
