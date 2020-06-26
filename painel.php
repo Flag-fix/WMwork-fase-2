@@ -12,11 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/sb-admin.min.css">
     <link rel="stylesheet" href="css/search.css">
 
-</head>
-
-<body class="bg-dark fixed-nav sticky-footer" id="page-top">
     <!-- Logando no sistema -->
-
     <?php
 
     session_start();
@@ -25,6 +21,9 @@
     }
     ?>
 
+</head>
+
+<body class="bg-dark fixed-nav sticky-footer" id="page-top">
     <!-- Navegacao -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <a class="navbar-brand" href="painel.php">Painel</a>
@@ -32,7 +31,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navbarPainel" class="collapse navbar-collapse">
-            <ul class="navbar-nav navbar-sidenav">
+            <ul class="navbar-nav navbar-sidenav" id="linksaccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
                     <a class="nav-link" href="#">
                         <i class="fa fa-fw fa-dashboard"></i>
@@ -46,18 +45,57 @@
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link nav-link-collapse collapse" href="#linkscomponentes" data-toggle="collapse" data-parent="#linksaccordion">
                         <i class="fa fa-fw fa-wrench"></i>
                         <span class="nav-link-text">Componentes</span>
                     </a>
+                    <ul class="sidenav-second-level collapse" id="linkscomponentes">
+                        <li>
+                            <a href="login.php">Página Login</a>
+                        </li>
+                        <li>
+                            <a href="recuperar.php">Página de Recuperação</a>
+                        </li>
+                        <li>
+                            <a href="registro.php">Página de Cadastro</a>
+                        </li>
+                        <li>
+                            <a href="#link3nivel" class="nav-link-collapse collapse" data-toggle="collapse">Página lvl
+                                3</a>
+                            <ul class="sidenav-third-level collapse" id="link3nivel">
+                                <li>
+                                    <a href="#"> Link 1</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Link 2</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Link 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
+
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link nav-link-collapse collapse" href="#linkspagina" data-toggle="collapse" data-parent="#linksaccordion">
                         <i class="fa fa-fw fa-file"></i>
                         <span class="nav-link-text">Páginas</span>
                     </a>
+                    <ul class="sidenav-second-level collapse" id="linkspagina">
+                        <li>
+                            <a href="login.php">Página Login</a>
+                        </li>
+                        <li>
+                            <a href="recuperar.php">Página de Recuperação</a>
+                        </li>
+                        <li>
+                            <a href="registro.php">Página de Cadastro</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
+
             <!-- Diminuir menu pra esquerda -->
             <ul class="navbar-nav sidenav-toggler">
                 <li class="nav-item">
@@ -66,33 +104,100 @@
                     </a>
                 </li>
             </ul>
-        </div>
-        <br>
-        <a href="" style="width: 68px; height: 35px; " >
-            <span class="fa fa-user" aria-hidden="true"></span>
-            <?php echo $_SESSION["usuario"]; ?>
-
-        </a>
-        <ul class="navbar-nav -ml-auto">
-            <li class="">
-
-            </li>
-            <li class="nav-item">
-                <form class="form-inline my-2 my-lg-0 mr-lg-2">
-                    <div class="search__wrapper">
-                        <input type="text" name="" placeholder=" Buscar" class="search__field" style="background-color: transparent;">
-                        <button type="submit" class="fa fa-search search__icon"></button>
+            <ul class="navbar-nav ml-auto">
+                <!-- Mostrar nome de Usuário Logado -->
+                <!-- <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-user"></i>
+                        <?php // echo $_SESSION["usuario"]; ?>
+                    </a>
+                </li> -->
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">
+                            Alertas
+                            <span class="badge badge-pill badge-warning">5 Itens</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+                        <h6 class="dropdown-header">Novos Alertas</h6>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-fw fa-long-arrow-up"></i>
+                                    Update 
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">14:30</span>
+                            <div class="dropdown-message small">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus cupiditate facilis recusandae et at exercitationem blanditiis. Omnis odio, ut deserunt blanditiis labore saepe necessitatibus ipsa iure repellat quam dicta?
+                            </div>
+                            <div class="dropdown-divider"></div>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-fw fa-long-arrow-down"></i>
+                                    Update 
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">14:30</span>
+                            <div class="dropdown-message small">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus cupiditate facilis recusandae et at exercitationem blanditiis. Omnis odio, ut deserunt blanditiis labore saepe necessitatibus ipsa iure repellat quam dicta?
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item small">Ver todos os Alertas</a>
+                        </a> 
                     </div>
-                </form>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="sair.php">
-                    <i class="fa fa-sign-out">Sair</i>
-                </a>
-            </li>
-        </ul>
+                </li>
+
+
+
+
+
+                <!-- Botão De Buscar diferenciado -->
+                <!-- <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                        <div class="search__wrapper">
+                            <input type="text" name="" placeholder=" Buscar" class="search__field"
+                                style="background-color: transparent;">
+                            <button type="submit" class="fa fa-search search__icon"></button>
+                        </div>
+                    </form>
+                </li> -->
+
+                <!-- Barra de Pesquisa -->
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Pesquisar ...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+
+                <!-- Botão Sair -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-sign-out">Sair</i>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
+
+
+
     <div class="content-wrapper">
         <div class="container-fluid">
             <ol class="breadcrumb">
