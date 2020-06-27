@@ -186,7 +186,7 @@
 
                 <!-- Botão Sair -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="sair.php">
                         <i class="fa fa-sign-out">Sair</i>
                     </a>
                 </li>
