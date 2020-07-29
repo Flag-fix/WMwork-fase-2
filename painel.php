@@ -41,56 +41,85 @@
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
                     <a class="nav-link" href="tabs.php">
                         <i class="fa fa-fw fa-table"></i>
-                        <span class="nav-link-text">Tabelas</span>
+                        <span class="nav-link-text">Clientes</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
                     <a class="nav-link nav-link-collapse collapse" href="#linkscomponentes" data-toggle="collapse" data-parent="#linksaccordion">
                         <i class="fa fa-fw fa-wrench"></i>
-                        <span class="nav-link-text">Componentes</span>
+                        <span class="nav-link-text">Gestão</span>
                     </a>
                     <ul class="sidenav-second-level collapse" id="linkscomponentes">
                         <li>
-                            <a href="login.php">Página Login</a>
-                        </li>
-                        <li>
-                            <a href="recuperar.php">Página de Recuperação</a>
-                        </li>
-                        <li>
-                            <a href="registro.php">Página de Cadastro</a>
-                        </li>
-                        <li>
-                            <a href="#link3nivel" class="nav-link-collapse collapse" data-toggle="collapse">Página lvl
-                                3</a>
+                            <a href="#link3nivel" class="nav-link-collapse collapse" data-toggle="collapse">Cadastrar</a>
                             <ul class="sidenav-third-level collapse" id="link3nivel">
                                 <li>
-                                    <a href="#"> Link 1</a>
-                                </li>
-                                <li>
-                                    <a href="#"> Link 2</a>
-                                </li>
-                                <li>
-                                    <a href="#"> Link 3</a>
+                                    <a href="#link4nivel" class="nav-link-collapse collapse" data-toggle="collapse">Clientes</a>
+                                    <ul class="sidenav-third-level collapse" id="link4nivel">
+                                        <li>
+                                            <a href="#">Cadastro</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alteração</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Exclusão</a>
+                                        </li>
+                                    </ul>
+                                    <a href="#link4-1nivel" class="nav-link-collapse collapse" data-toggle="collapse">Fornecedores</a>
+                                    <ul class="sidenav-third-level collapse" id="link4-1nivel">
+                                        <li>
+                                            <a href="#">Cadastro</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alteração</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Exclusão</a>
+                                        </li>
+                                    </ul>
+                                    <a href="#link4-2nivel" class="nav-link-collapse collapse" data-toggle="collapse">Equipamentos</a>
+                                    <ul class="sidenav-third-level collapse" id="link4-2nivel">
+                                        <li>
+                                            <a href="#">Cadastro</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Alteração</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Exclusão</a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                    <a class="nav-link nav-link-collapse collapse" href="#linkspagina" data-toggle="collapse" data-parent="#linksaccordion">
-                        <i class="fa fa-fw fa-file"></i>
-                        <span class="nav-link-text">Páginas</span>
-                    </a>
-                    <ul class="sidenav-second-level collapse" id="linkspagina">
                         <li>
-                            <a href="login.php">Página Login</a>
+                            <a href="#link5nivel" class="nav-link-collapse collapse" data-toggle="collapse">Relatório</a>
+                            <ul class="sidenav-third-level collapse" id="link5nivel">
+                                <li>
+                                    <a href="#">Clientes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Fornecedores</a>
+                                </li>
+                                <li>
+                                    <a href="#">Equipamentos</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="recuperar.php">Página de Recuperação</a>
-                        </li>
-                        <li>
-                            <a href="registro.php">Página de Cadastro</a>
+                            <a href="#link6nivel" class="nav-link-collapse collapse" data-toggle="collapse">Chamados</a>
+                            <ul class="sidenav-third-level collapse" id="link6nivel">
+                                <li>
+                                    <a href="#">Abertura</a>
+                                </li>
+                                <li>
+                                    <a href="#">Em Atendimento</a>
+                                </li>
+                                <li>
+                                    <a href="#">Fechados</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>
@@ -106,13 +135,13 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <!-- Mostrar nome de Usuário Logado -->
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-fw fa-user"></i>
-                        <?php // echo $_SESSION["usuario"]; 
+                        <?php echo $_SESSION["usuario"];
                         ?>
                     </a>
-                </li> -->
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
