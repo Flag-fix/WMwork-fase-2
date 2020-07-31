@@ -15,7 +15,6 @@
 <body>
     <?php
 
-
     try {
         // Conexao com o banco
         $base = new PDO("mysql:host=localhost:3308;dbname=wmwork", "root", "");

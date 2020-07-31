@@ -58,7 +58,7 @@
                                     <a href="#link4nivel" class="nav-link-collapse collapse" data-toggle="collapse">Clientes</a>
                                     <ul class="sidenav-third-level collapse" id="link4nivel">
                                         <li>
-                                            <a href="#">Cadastro</a>
+                                            <a href="./WMwork-fase-2/telas/cadastrar.php">Cadastro</a>
                                         </li>
                                         <li>
                                             <a href="#">Alteração</a>
@@ -222,7 +222,7 @@
         </div>
     </nav>
 
-    <!-- Área de Clientes -->
+    <!-- Área de Criação -->
     <div class="content-wrapper">
         <div class="container-fluid">
             <ol class="breadcrumb">
@@ -230,8 +230,9 @@
                     <a href="home.php">Home</a>
                 </li>
                 <li class="breadcrumb-item">
-                    Clientes
+                    Cadastro
                 </li>
+                
             </ol>
             <div class="row">
                 <div class="col-12">
@@ -273,94 +274,7 @@
                                 <td>27/11/2010</td>
                                 <td>R$ 2.500,00</td>
                             </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
-                            <tr>
-                                <td>Emerson Carvalho</td>
-                                <td>Programador</td>
-                                <td>Brasil</td>
-                                <td>28</td>
-                                <td>27/11/2010</td>
-                                <td>R$ 2.500,00</td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>

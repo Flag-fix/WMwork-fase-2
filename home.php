@@ -57,7 +57,7 @@
                                     <a href="#link4nivel" class="nav-link-collapse collapse" data-toggle="collapse">Clientes</a>
                                     <ul class="sidenav-third-level collapse" id="link4nivel">
                                         <li>
-                                            <a href="#">Cadastro</a>
+                                            <a href="./WMwork-fase-2/telas/cadastrar.php">Cadastro</a>
                                         </li>
                                         <li>
                                             <a href="#">Alteração</a>
