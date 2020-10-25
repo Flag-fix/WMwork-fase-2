@@ -51,7 +51,6 @@
             header("Location:painel.php");
 
 
-
         } else {
             header("Location:errou.php");
         }
